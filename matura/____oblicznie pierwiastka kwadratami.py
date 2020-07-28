@@ -2,18 +2,19 @@ import math
 eps = 0.0000001
 
 
-def pierwiastek(N, a=1, space=False):
-    print('N:', N, ' a:', a)
-    if not space:
-        space = N
+def pierwiastek(a, b=1, space_of_rectangle=False):
+    # print('a:', a, ' b:', b)
+    if not space_of_rectangle:
+        # bo drugi bok ma 1
+        space_of_rectangle = a
 
     # jak roznia miedzy bokami prostokąta jest mniejsza niz ustalona wartość to zwracany jest ten bok
-    if math.fabs(N - a) < eps:
-        return round(N, 8)
+    if math.fabs(a - b) < eps:
+        return round(a, 8)
     else:
-        N = (N + a) / 2
-        a = space/N
-        return pierwiastek(N, a, space)
+        a = (a + b) / 2
+        b = space_of_rectangle/a
+        return pierwiastek(a, b, space_of_rectangle)
 
 
 print(pierwiastek(3))

@@ -1,13 +1,7 @@
 from math import sqrt
 
 
-def perfectbumer_frajerskie(n):
-    res = []
-    for i in range(1, n // 2 + 1):
-        if n % i == 0:
-            res.append(i)
-
-    return sum(res) == n
+# suma dzienkiów równa sie ta liczba
 
 
 def perfectbumer(n):
@@ -21,4 +15,3 @@ def perfectbumer(n):
 
 
 print(perfectbumer(137438691328))
-print(perfectbumer_frajerskie(137438691328))
