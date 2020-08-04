@@ -22,7 +22,7 @@ def LIS(Sequnce):
 
         result = max(temp1, temp2)
         prevs[key] = result
-        
+
         return result
 
     for i, s in enumerate(Sequnce):
